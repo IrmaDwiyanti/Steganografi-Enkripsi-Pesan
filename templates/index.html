@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Steganografi ALpha + PIN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function switchTab(tab) {
+      document.getElementById('embedForm').classList.add('hidden');
+      document.getElementById('extractForm').classList.add('hidden');
+      document.getElementById('tab-embed').classList.remove('bg-white');
+      document.getElementById('tab-extract').classList.remove('bg-white');
+
+      document.getElementById(tab + 'Form').classList.remove('hidden');
+      document.getElementById('tab-' + tab).classList.add('bg-white');
+    }
+
+    window.onload = () => {
+      switchTab('embed');
+    };
+
+    function switchTab(tab) {
+      // Semua tombol
+      const embedBtn = document.getElementById('tab-embed');
+      const extractBtn = document.getElementById('tab-extract');
+
+      // Semua form
+      document.getElementById('embedForm').classList.add('hidden');
+      document.getElementById('extractForm').classList.add('hidden');
+
+      // Reset gaya tombol
+      embedBtn.classList.remove('bg-white', 'text-blue-600', 'font-medium');
+      embedBtn.classList.add('text-gray-600');
+      extractBtn.classList.remove('bg-white', 'text-blue-600', 'font-medium');
+      extractBtn.classList.add('text-gray-600');
+
+      // Aktifkan form & tombol sesuai tab
+      document.getElementById(tab + 'Form').classList.remove('hidden');
+      const activeBtn = document.getElementById('tab-' + tab);
+      activeBtn.classList.remove('text-gray-600');
+      activeBtn.classList.add('bg-white', 'text-blue-600', 'font-medium');
+    }
+
+    window.onload = () => {
+      switchTab('embed');
+    };
+
+  </script>
+</head>
+<body class="bg-gradient-to-r from-blue-50 to-blue-100 min-h-screen p-6">
+  <div class="bg-white p-6 rounded-xl shadow-lg w-full max-w-2xl mx-auto">
+    <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">🔐 Alpha Channel Steganografi</h1>
+
+    <div class="flex justify-center mb-6">
+      <button id="tab-embed" onclick="switchTab('embed')"
+        class="px-6 py-2 rounded-t-lg border-t border-l border-r">Sisipkan</button>
+      <button id="tab-extract" onclick="switchTab('extract')"
+        class="px-6 py-2 rounded-t-lg border-t border-r border-l">Ekstrak</button>
+    </div>
+
+
+    <!-- Form Embed -->
+    <form id="embedForm" method="POST" enctype="multipart/form-data" class="space-y-4 hidden">
+      <input type="hidden" name="operation" value="embed">
+      <div>
+        <label class="block text-gray-700 mb-1">Upload Gambar</label>
+        <input type="file" name="image" required class="w-full border rounded p-2" />
+      </div>
+      <div>
+        <label class="block text-gray-700 mb-1">PIN (Wajib)</label>
+        <input type="password" name="pin" required class="w-full border rounded p-2" />
+      </div>
+      <div>
+        <label class="block text-gray-700 mb-1">Pesan Rahasia</label>
+        <input type="text" name="message" required class="w-full border rounded p-2" />
+      </div>
+      <div class="text-center">
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">🔒 Sisipkan Pesan</button>
+      </div>
+    </form>
+
+    <!-- Form Ekstrak -->
+    <form id="extractForm" method="POST" enctype="multipart/form-data" class="space-y-4 hidden">
+      <input type="hidden" name="operation" value="extract">
+      <div>
+        <label class="block text-gray-700 mb-1">Upload Gambar Stego</label>
+        <input type="file" name="image" required class="w-full border rounded p-2" />
+      </div>
+      <div>
+        <label class="block text-gray-700 mb-1">PIN (Wajib)</label>
+        <input type="password" name="pin" required class="w-full border rounded p-2" />
+      </div>
+      <div class="text-center">
+        <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">🔓 Ekstrak Pesan</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hasil Ekstraksi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen p-6">
+  <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow">
+    <h2 class="text-2xl font-bold text-green-700 mb-4">✅ Pesan Berhasil Diekstrak</h2>
+    <p class="mb-4"><strong>Pesan:</strong> {{ message }}</p>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <h3 class="text-lg font-semibold">Gambar Stego</h3>
+          <img src="/outputs/{{ stego }}" class="w-full rounded border" />
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold">Gambar Asli</h3>
+        <img src="/uploads/{{ original }}" class="w-full rounded border" />
+      </div>
+    </div>
+    <div class="mt-6 text-center">
+      <a href="/" class="text-blue-600 font-semibold hover:underline">← Kembali</a>
+    </div>
+  </div>
+</body>
+</html>
