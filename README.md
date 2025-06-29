@@ -18,7 +18,10 @@ Aplikasi web ini menerapkan teknik steganografi citra digital menggunakan **Alph
 
 | Form Sisipkan | Form Ekstrak | Hasil Ekstrak |
 |---------------|--------------|----------------|
-| ![Embed](screenshots/embed.png) | ![Extract](screenshots/extract.png) | ![Result](screenshots/result.png) |
+| ![Embed](![Screenshot 2025-06-29 013333](https://github.com/user-attachments/assets/4f82ee89-f37f-4925-ba19-6334f651854b)
+) | ![Extract](![Screenshot 2025-06-29 013426](https://github.com/user-attachments/assets/ce840e2d-b94e-41b3-a6e9-0f6237a0d470)
+) | ![Result](![Uploading Screenshot 2025-06-29 013938.png…]()
+) |
 
 ---
 
@@ -27,5 +30,5 @@ Aplikasi web ini menerapkan teknik steganografi citra digital menggunakan **Alph
 ### 1. Clone repository
 
 ```bash
-git clone https://github.com/username/alpha-steganography-web.git
-cd alpha-steganography-web
+git clone https://github.com/IrmaDwiyanti/Steganografi-Enkripsi-Pesan.git
+cd Steganografi-Enkripsi-Pesan
