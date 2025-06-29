@@ -14,14 +14,13 @@ Aplikasi web ini menerapkan teknik steganografi citra digital menggunakan **Alph
 
 ---
 
-## 🖥️ Tampilan Aplikasi
+## 🖼️ Tampilan Aplikasi
 
-| Form Sisipkan | Form Ekstrak | Hasil Ekstrak |
-|---------------|--------------|----------------|
-| ![Embed](![Screenshot 2025-06-29 013333](https://github.com/user-attachments/assets/4f82ee89-f37f-4925-ba19-6334f651854b)
-) | ![Extract](![Screenshot 2025-06-29 013426](https://github.com/user-attachments/assets/ce840e2d-b94e-41b3-a6e9-0f6237a0d470)
-) | ![Result](![Uploading Screenshot 2025-06-29 013938.png…]()
-) |
+| **Fitur**             | **Tampilan** |
+|-----------------------|--------------|
+| **Form Sisipkan** , ini digunakan untuk menyisipkan pesan rahasia ke dalam gambar. Pengguna memilih gambar `.png`, mengisi PIN, dan mengetik pesan rahasia. | ![Form Sisipkan](https://github.com/user-attachments/assets/1f4252fd-4522-4fa7-8f4f-0ac3623570ca) |
+| **Form Ekstrak** , ini digunakan untuk mengekstrak pesan dari gambar stego.  Pengguna harus mengunggah gambar hasil stego dan memasukkan PIN yang benar. | ![Form Ekstrak](https://github.com/user-attachments/assets/fe1b92a7-3c9b-4729-92cf-98d36700a582) |
+| **Hasil Ekstrak** , Halaman ini menampilkan pesan rahasia yang berhasil diekstrak.  Juga terlihat gambar asli dan gambar stego untuk perbandingan. | ![Hasil Ekstrak](https://github.com/user-attachments/assets/bd85e8be-d5cf-4ce2-9707-26ee0ddb304b) |
 
 ---
 
@@ -32,3 +31,23 @@ Aplikasi web ini menerapkan teknik steganografi citra digital menggunakan **Alph
 ```bash
 git clone https://github.com/IrmaDwiyanti/Steganografi-Enkripsi-Pesan.git
 cd Steganografi-Enkripsi-Pesan
+```
+
+### 2. Install Depedensi
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. ▶️ Cara Menjalankan Aplikasi
+
+```bash
+python app.py
+```
+
+### 4. Lalu buka browser dan akses
+
+```bash
+http://localhost:5000
+```
+
